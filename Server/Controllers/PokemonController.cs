@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Server.DTO;
 using Server.Services;
 
 namespace Server.Controllers;
@@ -15,10 +16,8 @@ public class PokemonController : ControllerBase
   }
 
   [HttpGet]
-  public string Get()
+  public Task<List<PokemonDto>> Get()
   {
-    pokemonService.GetPokemons();
-
-    return "Hello World";
+    return pokemonService.GetPokemons(); ;
   }
 }
