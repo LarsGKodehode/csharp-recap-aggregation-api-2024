@@ -1,0 +1,6 @@
+# Generated artifacts
+obj
+bin
+
+# IDE specifics
+.vscode
